@@ -1,0 +1,375 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-08-29 19:51+0000\n"
+"PO-Revision-Date: 2018-08-29 15:56-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/MenusController.php:83;108
+msgid "The menus been saved."
+msgstr ""
+
+#: Controller/MenusController.php:87;112
+msgid "The menusld not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenusController.php:130
+msgid "The menus been deleted."
+msgstr ""
+
+#: Controller/MenusController.php:132
+msgid "The menusld not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/MealsController.php:68;92
+msgid "The comment has been saved."
+msgstr ""
+
+#: Controller/MealsController.php:72;96
+msgid "The comment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MealsController.php:113
+msgid "The comment has been deleted."
+msgstr ""
+
+#: Controller/MealsController.php:115
+msgid "The comment could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TagsController.php:55;80
+msgid "The tag has been saved."
+msgstr ""
+
+#: Controller/TagsController.php:59;84
+msgid "The tag could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TagsController.php:102
+msgid "The tag has been deleted."
+msgstr ""
+
+#: Controller/TagsController.php:104
+msgid "The tag could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:73;96
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:77;100
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:116
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:118
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Menus/add.ctp:9 Template/Menus/edit.ctp:9
+#: Template/Menus/index.ctp:9;30 Template/Menus/view.ctp:9;67;96
+#: Template/Meals/add.ctp:9 Template/Meals/edit.ctp:9
+#: Template/Meals/index.ctp:9;25 Template/Meals/view.ctp:9
+#: Template/Tags/add.ctp:9 Template/Tags/edit.ctp:9
+#: Template/Tags/index.ctp:9;24 Template/Tags/view.ctp:9;51
+#: Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9;23 Template/Users/view.ctp:9;55
+msgid "Actions"
+msgstr ""
+
+#: Template/Menus/add.ctp:10 Template/Menus/edit.ctp:15
+#: Template/Menus/view.ctp:12 Template/Meals/add.ctp:11
+#: Template/Meals/edit.ctp:17 Template/Meals/index.ctp:11
+#: Template/Meals/view.ctp:14 Template/Tags/add.ctp:11
+#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:11
+#: Template/Tags/view.ctp:14 Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Menus"
+msgstr ""
+
+#: Template/Menus/add.ctp:11 Template/Menus/edit.ctp:16
+#: Template/Menus/index.ctp:11 Template/Menus/view.ctp:14
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Menus/add.ctp:12 Template/Menus/edit.ctp:17
+#: Template/Menus/index.ctp:12 Template/Menus/view.ctp:15
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+msgid "New User"
+msgstr ""
+
+#: Template/Menus/add.ctp:13 Template/Menus/edit.ctp:18
+#: Template/Menus/index.ctp:13 Template/Menus/view.ctp:16
+#: Template/Meals/add.ctp:10 Template/Meals/edit.ctp:16
+#: Template/Meals/view.ctp:12
+msgid "List Meals"
+msgstr ""
+
+#: Template/Menus/add.ctp:14 Template/Menus/edit.ctp:19
+#: Template/Menus/index.ctp:14 Template/Menus/view.ctp:17
+#: Template/Meals/index.ctp:10 Template/Meals/view.ctp:13
+msgid "New Comment"
+msgstr ""
+
+#: Template/Menus/add.ctp:15 Template/Menus/edit.ctp:20
+#: Template/Menus/index.ctp:15 Template/Menus/view.ctp:18
+#: Template/Tags/add.ctp:10 Template/Tags/edit.ctp:16 Template/Tags/view.ctp:12
+msgid "List Tags"
+msgstr ""
+
+#: Template/Menus/add.ctp:16 Template/Menus/edit.ctp:21
+#: Template/Menus/index.ctp:16 Template/Menus/view.ctp:19
+#: Template/Tags/index.ctp:10 Template/Tags/view.ctp:13
+msgid "New Tag"
+msgstr ""
+
+#: Template/Menus/add.ctp:22
+msgid "Add Article"
+msgstr "Ajouter un menus
+
+#: Template/Menus/add.ctp:32 Template/Menus/edit.ctp:37
+#: Template/Meals/add.ctp:25 Template/Meals/edit.ctp:31
+#: Template/Tags/add.ctp:24 Template/Tags/edit.ctp:30 Template/Users/add.ctp:24
+#: Template/Users/edit.ctp:30
+msgid "Submit"
+msgstr ""
+
+#: Template/Menus/edit.ctp:12 Template/Menus/index.ctp:45
+#: Template/Menus/view.ctp:78;109 Template/Meals/edit.ctp:11
+#: Template/Meals/index.ctp:39 Template/Tags/edit.ctp:11
+#: Template/Tags/index.ctp:37 Template/Tags/view.ctp:66
+#: Template/Users/edit.ctp:11 Template/Users/index.ctp:35
+#: Template/Users/view.ctp:70
+msgid "Delete"
+msgstr ""
+
+#: Template/Menus/edit.ctp:12 Template/Menus/index.ctp:45
+#: Template/Menus/view.ctp:11;78;109 Template/Meals/edit.ctp:13
+#: Template/Meals/index.ctp:39 Template/Meals/view.ctp:11
+#: Template/Tags/edit.ctp:13 Template/Tags/index.ctp:37
+#: Template/Tags/view.ctp:11;66 Template/Users/edit.ctp:13
+#: Template/Users/index.ctp:35 Template/Users/view.ctp:11;70
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Menus/edit.ctp:27 Template/Menus/view.ctp:10
+msgid "Edit Article"
+msgstr ""
+
+#: Template/Menus/index.ctp:10 Template/Menus/view.ctp:13
+#: Template/Meals/add.ctp:12 Template/Meals/edit.ctp:18
+#: Template/Meals/index.ctp:12 Template/Meals/view.ctp:15
+#: Template/Tags/add.ctp:12 Template/Tags/edit.ctp:18
+#: Template/Tags/index.ctp:12 Template/Tags/view.ctp:15
+#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+msgid "New Article"
+msgstr ""
+
+#: Template/Menus/index.ctp:20
+msgid "Menus"
+msgstr ""
+
+#: Template/Menus/index.ctp:43 Template/Menus/view.ctp:76;107
+#: Template/Meals/index.ctp:37 Template/Tags/index.ctp:35
+#: Template/Tags/view.ctp:64 Template/Users/index.ctp:33
+#: Template/Users/view.ctp:68
+msgid "View"
+msgstr "Afficher"
+
+#: Template/Menus/index.ctp:44 Template/Menus/view.ctp:77;108
+#: Template/Meals/index.ctp:38 Template/Tags/index.ctp:36
+#: Template/Tags/view.ctp:65 Template/Users/index.ctp:34
+#: Template/Users/view.ctp:69
+msgid "Edit"
+msgstr ""
+
+#: Template/Menus/index.ctp:53 Template/Meals/index.ctp:47
+#: Template/Tags/index.ctp:45 Template/Users/index.ctp:43
+msgid "first"
+msgstr ""
+
+#: Template/Menus/index.ctp:54 Template/Meals/index.ctp:48
+#: Template/Tags/index.ctp:46 Template/Users/index.ctp:44
+msgid "previous"
+msgstr ""
+
+#: Template/Menus/index.ctp:56 Template/Meals/index.ctp:50
+#: Template/Tags/index.ctp:48 Template/Users/index.ctp:46
+msgid "next"
+msgstr ""
+
+#: Template/Menus/index.ctp:57 Template/Meals/index.ctp:51
+#: Template/Tags/index.ctp:49 Template/Users/index.ctp:47
+msgid "last"
+msgstr ""
+
+#: Template/Menus/index.ctp:59 Template/Meals/index.ctp:53
+#: Template/Tags/index.ctp:51 Template/Users/index.ctp:49
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+
+#: Template/Menus/view.ctp:11
+msgid "Delete Article"
+msgstr ""
+
+#: Template/Menus/view.ctp:26
+msgid "User"
+msgstr ""
+
+#: Template/Menus/view.ctp:30;64 Template/Tags/view.ctp:22;45
+#: Template/Users/view.ctp:49
+msgid "Title"
+msgstr ""
+
+#: Template/Menus/view.ctp:34 Template/Tags/view.ctp:46
+#: Template/Users/view.ctp:50
+msgid "Slug"
+msgstr ""
+
+#: Template/Menus/view.ctp:38;63;90 Template/Meals/view.ctp:30
+#: Template/Tags/view.ctp:26;43 Template/Users/view.ctp:30;47
+msgid "Id"
+msgstr ""
+
+#: Template/Menus/view.ctp:42;65;94 Template/Meals/view.ctp:34
+#: Template/Tags/view.ctp:30;49 Template/Users/view.ctp:34;53
+msgid "Created"
+msgstr ""
+
+#: Template/Menus/view.ctp:46;66;95 Template/Meals/view.ctp:38
+#: Template/Tags/view.ctp:34;50 Template/Users/view.ctp:38;54
+msgid "Modified"
+msgstr ""
+
+#: Template/Menus/view.ctp:50 Template/Tags/view.ctp:48
+#: Template/Users/view.ctp:52
+msgid "Published"
+msgstr ""
+
+#: Template/Menus/view.ctp:51
+msgid "Yes"
+msgstr ""
+
+#: Template/Menus/view.ctp:51
+msgid "No"
+msgstr ""
+
+#: Template/Menus/view.ctp:55 Template/Tags/view.ctp:47
+#: Template/Users/view.ctp:51
+msgid "Body"
+msgstr ""
+
+#: Template/Menus/view.ctp:59
+msgid "Related Tags"
+msgstr ""
+
+#: Template/Menus/view.ctp:86
+msgid "Related Meals"
+msgstr ""
+
+#: Template/Menus/view.ctp:91
+msgid "Article Id"
+msgstr ""
+
+#: Template/Menus/view.ctp:92 Template/Meals/view.ctp:26
+msgid "Name"
+msgstr ""
+
+#: Template/Menus/view.ctp:93 Template/Meals/view.ctp:43
+msgid "Comment"
+msgstr ""
+
+#: Template/Meals/add.ctp:18
+msgid "Add Comment"
+msgstr ""
+
+#: Template/Meals/edit.ctp:24 Template/Meals/view.ctp:10
+msgid "Edit Comment"
+msgstr ""
+
+#: Template/Meals/index.ctp:16
+msgid "Meals"
+msgstr ""
+
+#: Template/Meals/view.ctp:11
+msgid "Delete Comment"
+msgstr ""
+
+#: Template/Meals/view.ctp:22
+msgid "Article"
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Tags/add.ctp:18
+msgid "Add Tag"
+msgstr ""
+
+#: Template/Tags/edit.ctp:24 Template/Tags/view.ctp:10
+msgid "Edit Tag"
+msgstr ""
+
+#: Template/Tags/index.ctp:16
+msgid "Tags"
+msgstr ""
+
+#: Template/Tags/view.ctp:11
+msgid "Delete Tag"
+msgstr ""
+
+#: Template/Tags/view.ctp:39 Template/Users/view.ctp:43
+msgid "Related Menus"
+msgstr ""
+
+#: Template/Tags/view.ctp:44 Template/Users/view.ctp:48
+msgid "User Id"
+msgstr ""
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:24 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr ""
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:22
+msgid "Email"
+msgstr ""
+
+#: Template/Users/view.ctp:26
+msgid "Password"
+msgstr ""
