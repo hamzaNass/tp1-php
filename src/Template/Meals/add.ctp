@@ -1,4 +1,15 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Types",
+    "action" => "getByRestaurant",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Meals/add', ['block' => 'scriptBottom']);
+?>
+
+
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Meal $meal
@@ -12,6 +23,8 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Menu Items'), ['controller' => 'MenuItems', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Menu Item'), ['controller' => 'MenuItems', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List types'), ['controller' => 'types', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New types'), ['controller' => 'types', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="meals form large-9 medium-8 columns content">
@@ -19,6 +32,8 @@
     <fieldset>
         <legend><?= __('Add Meal') ?></legend>
         <?php
+            echo $this->Form->control('restaurant_id', ['options' => $restaurants]);
+            echo $this->Form->control('type_id', ['options' => $types]);
             echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('date_meal');
             echo $this->Form->control('cost_meal');

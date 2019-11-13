@@ -115,7 +115,7 @@ class MenuItemsController extends AppController
     {
         $action = $this->request->getParam('action');
         
-        if (in_array($action, ['add', 'tags', 'delete', 'edit'])) {
+        if (in_array($action, ['add', 'delete', 'edit'])) {
             return true;
         }
     

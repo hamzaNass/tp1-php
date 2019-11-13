@@ -60,9 +60,24 @@ class MealsController extends AppController
             }
             $this->Flash->error(__('The meal could not be saved. Please, try again.'));
         }
+
+        // Bâtir la liste des catégories  
+        $this->loadModel('Restaurants');
+        $restaurants = $this->Restaurants->find('list', ['limit' => 200]);
+
+        // Extraire le id de la première catégorie
+        $restaurants = $restaurants->toArray();
+        reset($restaurants);
+        $restaurant_id = key($restaurants);
+
+        // Bâtir la liste des sous-catégories reliées à cette catégorie
+        $types = $this->Meals->Types->find('list', [
+            'conditions' => ['Types.restaurant_id' => $restaurant_id],
+        ]);
+    
         $users = $this->Meals->Users->find('list', ['limit' => 200]);
         $menuItems = $this->Meals->MenuItems->find('list', ['limit' => 200]);
-        $this->set(compact('meal', 'users', 'menuItems'));
+        $this->set(compact('meal', 'types', 'restaurants', 'users', 'menuItems'));
     }
 
     /**
@@ -115,7 +130,7 @@ class MealsController extends AppController
     {
         $action = $this->request->getParam('action');
         
-        if (in_array($action, ['add', 'tags', 'delete', 'edit'])) {
+        if (in_array($action, ['add', 'delete', 'edit'])) {
             return true;
         }
     

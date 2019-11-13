@@ -41,6 +41,9 @@ class MealsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('types', [
+            'foreignKey' => 'type_id'
+        ]);
         $this->belongsToMany('MenuItems', [
             'foreignKey' => 'meal_id',
             'targetForeignKey' => 'menu_item_id',
