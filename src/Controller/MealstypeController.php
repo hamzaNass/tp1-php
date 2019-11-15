@@ -19,9 +19,9 @@ class MealstypeController extends AppController
      */
     public function index()
     {
-        $mealstype = $this->paginate($this->Mealstype);
+        $mealstypes = $this->paginate($this->Mealstype);
 
-        $this->set(compact('mealstype'));
+        $this->set(compact('mealstypes'));
     }
 
     public function initialize() {

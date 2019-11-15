@@ -1,51 +1,65 @@
 <?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Mealstype[]|\Cake\Collection\CollectionInterface $mealstype
- */
+$urlToRestApi = $this->Url->build('/api/mealstypes', true);
+echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
+echo $this->Html->script('Mealstypes/index', ['block' => 'scriptBottom']);
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Mealstype'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="mealstype index large-9 medium-8 columns content">
-    <h3><?= __('Mealstype') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($mealstype as $mealstype): ?>
-            <tr>
-                <td><?= $this->Number->format($mealstype->id) ?></td>
-                <td><?= h($mealstype->name) ?></td>
-                <td><?= h($mealstype->created) ?></td>
-                <td><?= h($mealstype->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $mealstype->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $mealstype->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $mealstype->id], ['confirm' => __('Are you sure you want to delete # {0}?', $mealstype->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default mealstypes-content">
+            <div class="panel-heading">Mealstypes <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();">Add</a></div>
+            <div class="panel-body none formData" id="addForm">
+                <h2 id="actionLabel">Add Mealstype</h2>
+                <form class="form" id="mealstypeAddForm" enctype='application/json'>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" id="name"/>
+                    </div>
+                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
+                    <a href="javascript:void(0);" class="btn btn-success" onclick="mealstypeAction('add')">Add Mealstype</a>
+                    <!-- input type="submit" class="btn btn-success" id="addButton" value="Add Cocktail" -->
+                </form>
+            </div>
+            <div class="panel-body none formData" id="editForm">
+                <h2 id="actionLabel">Edit Mealstype</h2>
+                <form class="form" id="mealstypeEditForm" enctype='application/json'>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" id="nameEdit"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="id" id="idEdit"/>
+                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
+                    <a href="javascript:void(0);" class="btn btn-success" onclick="mealstypeAction('edit')">Update Mealstype</a>
+                    <!-- input type="submit" class="btn btn-success" id="editButton" value="Update Cocktail" -->
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="mealstypeData">
+                    <?php
+                    $count = 0;
+                    foreach ($mealstypes as $mealstype): $count++;
+                        ?>
+                        <tr>
+                            <td><?php echo '#' . $count; ?></td>
+                            <td><?php echo $mealstype['name']; ?></td>
+                            <td>
+                                <a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editMealstype('<?php echo $mealstype['id']; ?>')"></a>
+                                <a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete data?') ? mealstypeAction('delete', '<?php echo $mealstype['id']; ?>') : false;"></a>
+                            </td>
+                        </tr>
+                        <?php
+                    endforeach;
+                    ?>
+                    <tr><td colspan="5">No mealstype(s) found......</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
