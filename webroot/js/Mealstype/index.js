@@ -69,7 +69,7 @@ function mealstypeAction(type, id) {
         success: function (msg) {
             if (msg) {
                 alert('meals type data has been ' + statusArr[type] + ' successfully.');
-                getmMalstypes();
+                getMealstypes();
                 $('.form')[0].reset();
                 $('.formData').slideUp();
             } else {

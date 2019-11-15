@@ -6,12 +6,12 @@ $this->start('tb_actions');
 ?>
 <li><?= $this->Html->link(__('Edit Mealstype'), ['action' => 'edit', $mealstype->id]) ?> </li>
 <li><?= $this->Form->postLink(__('Delete Mealstype'), ['action' => 'delete', $mealstype->id], ['confirm' => __('Are you sure you want to delete # {0}?', $mealstype->id)]) ?> </li>
-<li><?= $this->Html->link(__('List Mealstypes'), ['action' => 'index']) ?> </li>
+<li><?= $this->Html->link(__('List Mealstype'), ['action' => 'index']) ?> </li>
 <li><?= $this->Html->link(__('New Mealstype'), ['action' => 'add']) ?> </li>
 <li><?=
     $this->Html->link('Section publique en JS', [
         'prefix' => false,
-        'controller' => 'Mealstypes',
+        'controller' => 'Mealstype',
         'action' => 'index'
     ]);
     ?>

@@ -8,14 +8,14 @@ $this->extend('/Layout/TwitterBootstrap/dashboard');
 
 $this->start('tb_actions');
 ?>
-    <li><?= $this->Html->link(__('List Mealstypes'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('List Mealstype'), ['action' => 'index']) ?></li>
 <?php
 $this->end();
 
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Html->link(__('List Mealstypes'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('List Mealstype'), ['action' => 'index']) ?></li>
 </ul>
 <?php
 $this->end();

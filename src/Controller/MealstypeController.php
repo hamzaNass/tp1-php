@@ -3,10 +3,12 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+
+
 /**
  * Mealstype Controller
  *
- * @property \App\Model\Table\MealstypeTable $Mealstype
+ * @property \App\Model\Table\MealstypeTableTable $Roomtype
  *
  * @method \App\Model\Entity\Mealstype[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
@@ -24,9 +26,22 @@ class MealstypeController extends AppController
         $this->set(compact('mealstypes'));
     }
 
+    public $paginate = [
+        'page' => 1,
+        'limit' => 5,
+        'maxLimit' => 150,
+        /*        'fields' => [
+          'id', 'name', 'description'
+          ],
+         */ 'sortWhitelist' => [
+            'id', 'name',
+        ]
+    ];
+
     public function initialize() {
         parent::initialize();
         $this->Auth->allow(['autocompletedemo', 'findMealstype', 'add', 'edit', 'delete']);
+        //$this->viewBuilder()->setLayout('monopage');
     }
 
     public function findMealstype() {
@@ -48,86 +63,7 @@ class MealstypeController extends AppController
     }
 
     public function autocompletedemo() {
-        
+
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Mealstype id.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $mealstype = $this->Mealstype->get($id, [
-            'contain' => []
-        ]);
-
-        $this->set('mealstype', $mealstype);
-    }
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $mealstype = $this->Mealstype->newEntity();
-        if ($this->request->is('post')) {
-            $mealstype = $this->Mealstype->patchEntity($mealstype, $this->request->getData());
-            if ($this->Mealstype->save($mealstype)) {
-                $this->Flash->success(__('The mealstype has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The mealstype could not be saved. Please, try again.'));
-        }
-        $this->set(compact('mealstype'));
-    }
-
-    /**
-     * Edit method
-     *
-     * @param string|null $id Mealstype id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $mealstype = $this->Mealstype->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $mealstype = $this->Mealstype->patchEntity($mealstype, $this->request->getData());
-            if ($this->Mealstype->save($mealstype)) {
-                $this->Flash->success(__('The mealstype has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The mealstype could not be saved. Please, try again.'));
-        }
-        $this->set(compact('mealstype'));
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Mealstype id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $mealstype = $this->Mealstype->get($id);
-        if ($this->Mealstype->delete($mealstype)) {
-            $this->Flash->success(__('The mealstype has been deleted.'));
-        } else {
-            $this->Flash->error(__('The mealstype could not be deleted. Please, try again.'));
-        }
-
-        return $this->redirect(['action' => 'index']);
-    }
 }

@@ -1,7 +1,7 @@
 <?php
-$urlToRestApi = $this->Url->build('/api/mealstypes', true);
+$urlToRestApi = $this->Url->build('/api/Mealstype', true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
-echo $this->Html->script('Mealstypes/index', ['block' => 'scriptBottom']);
+echo $this->Html->script('Mealstype/index', ['block' => 'scriptBottom']);
 ?>
 
 <div class="container">

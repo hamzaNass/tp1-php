@@ -16,7 +16,7 @@ $this->start('tb_actions');
     )
     ?>
     </li>
-    <li><?= $this->Html->link(__('List Mealstypes'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('List Mealstype'), ['action' => 'index']) ?></li>
 <?php
 $this->end();
 
@@ -31,7 +31,7 @@ $this->start('tb_sidebar');
     )
     ?>
     </li>
-    <li><?= $this->Html->link(__('List Mealstypes'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('List Mealstype'), ['action' => 'index']) ?></li>
 </ul>
 <?php
 $this->end();
