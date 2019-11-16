@@ -1,4 +1,6 @@
 <?php
+namespace App\Controller;
+
 namespace App\Controller\Admin;
 
 use App\Controller\Admin\AppController;
@@ -21,10 +23,10 @@ class MealstypeController extends AppController
      */
     public function index()
     {
-        /*$mealstypes = $this->paginate($this->Mealstype);
+        $mealstypes = $this->paginate($this->Mealstype);
 
-        $this->set(compact('mealstypes'));*/
-        $mealstypes = $this->Mealstype($this->Cocktails);
+        //$this->set(compact('mealstypes'));
+        //$mealstypes = $this->Mealstype($this->Mealstype);
 
         $this->set(compact('mealstypes'));
         $this->set('_serialize', ['mealstypes']);

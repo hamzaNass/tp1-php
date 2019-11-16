@@ -1,24 +1,24 @@
-function getMealstypes() {
+function getMealstype() {
     $.ajax({
         type: 'GET',
         url: urlToRestApi,
         dataType: "json",
         success:
-                function (mealstypes) {
-                    var mealstypeTable = $('#mealstypeData');
-                    mealstypeTable.empty();
-                    var count = 1;
-                    $.each(mealstypes.data, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editMealstype(' + value.id + ')"></a>' +
-                                '<a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm(\'Are you sure to delete data?\') ? mealstypeAction(\'delete\', ' + value.id + ') : false;"></a>' +
-                                '</td></tr>';
-                        mealstypeTable.append('<tr><td>' + count + '</td><td>' + value.name + '</td><td>' + value.description + editDeleteButtons);
-                        count++;
-                    });
+            function (mealstypes) {
+                var mealstypeTable = $('#mealstypeData');
+                mealstypeTable.empty();
+                var count = 1;
+                $.each(mealstypes.data, function (key, value)
+                {
+                    var editDeleteButtons = '</td><td>' +
+                        '<a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editMealstype(' + value.id + ')"></a>' +
+                        '<a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm(\'Are you sure to delete data?\') ? mealstypeAction(\'delete\', ' + value.id + ') : false;"></a>' +
+                        '</td></tr>';
+                    mealstypeTable.append('<tr><td>' + count + '</td><td>' + value.name + '</td><td>' + value.description + editDeleteButtons);
+                    count++;
+                });
 
-                }
+            }
     });
 }
 
@@ -69,7 +69,7 @@ function mealstypeAction(type, id) {
         success: function (msg) {
             if (msg) {
                 alert('meals type data has been ' + statusArr[type] + ' successfully.');
-                getMealstypes();
+                getMealstype();
                 $('.form')[0].reset();
                 $('.formData').slideUp();
             } else {

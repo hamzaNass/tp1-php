@@ -49,7 +49,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 ], ['block' => 'scriptLibraries']
         );
         ?>
-    
+
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
@@ -64,45 +64,45 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 $loguser = $this->request->session()->read('Auth.User');
                  if ($loguser) {
                     $user = $loguser['email'];
-                    echo $this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']);
+                    echo $this->Html->link($user . ' logout', ['prefix' => false,'controller' => 'Users', 'action' => 'logout']);
                 } else {
-                    echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
+                    echo $this->Html->link('login', ['prefix' => false,'controller' => 'Users', 'action' => 'login']);
                 }
-                ?></li>            
+                ?></li>
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
                                     <li>
-                        <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
+                        <?= $this->Html->link('Français', ['prefix' => false,'action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
                     </li>
 
                     <li>
-                        <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
+                        <?= $this->Html->link('English', ['prefix' => false,'action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
                     </li>
 
                     <li>
-                        <?= $this->Html->link('Español', ['action' => 'changeLang', 'es_ES'], ['escape' => false]) ?>
+                        <?= $this->Html->link('Español', ['prefix' => false,'action' => 'changeLang', 'es_ES'], ['escape' => false]) ?>
                     </li>
 
                     <li>
                         <?= $this->Html->link('À propos', '/html/apropos.html'); ?>
                     </li>
-                    
+
                     <li><?=
-                        $this->Html->link('Listes liées', [
+                        $this->Html->link('Listes liées', ['prefix' => false,
                             'controller' => 'meals',
                             'action' => 'add'
                         ]);
                         ?>
                     </li>
                     <li><?=
-                        $this->Html->link('Autocomplete', [
+                        $this->Html->link('Autocomplete', ['prefix' => false,
                             'controller' => 'mealstype',
                             'action' => 'autocompletedemo'
                         ]);
                         ?>
                     </li>
 
-                     
+
             </ul>
         </div>
     </nav>
@@ -114,6 +114,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </footer>
             <?= $this->fetch('scriptLibraries') ?>
         <?= $this->fetch('script'); ?>
-        <?= $this->fetch('scriptBottom') ?> 
+        <?= $this->fetch('scriptBottom') ?>
 </body>
 </html>
